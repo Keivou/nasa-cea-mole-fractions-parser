@@ -39,16 +39,30 @@ The script only processes the data output. It will be up to the user to manually
 
 ### 1. Installation
 
-1.  **Navigate** to the project directory in your terminal.
-2.  **Create** a virtual environment:
+1.  **Clone the Repository:** Download the project files using Git:
+
+    ```bash
+    git clone https://github.com/Keivou/nasa-cea-mole-fractions-parser
+    cd NASA-CEA-PARSER
+    ```
+
+2.  **Create Virtual Environment:**
+
     ```bash
     python -m venv .venv
     ```
-3.  **Activate** the environment:
+
+3.  **Activate Environment:**
+
     ```bash
+    # On Linux/macOS
     source .venv/bin/activate
+
+    # On Windows (Command Prompt)
+    .venv\Scripts\activate.bat
     ```
-4.  **Install** dependencies:
+
+4.  **Install Dependencies:** Install all required Python packages (including `pandas`):
     ```bash
     pip install -r requirements.txt
     ```
