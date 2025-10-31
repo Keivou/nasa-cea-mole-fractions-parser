@@ -43,7 +43,7 @@ The script only processes the data output. It will be up to the user to manually
 
     ```bash
     git clone https://github.com/Keivou/nasa-cea-mole-fractions-parser
-    cd NASA-CEA-PARSER
+    cd nasa-cea-mole-fractions-parser
     ```
 
 2.  **Create Virtual Environment:**
