@@ -20,14 +20,16 @@ def get_word_list_and_start_index(cea_out_file):
     ### Look for amount of keywords
 
     count = 0
-    target_sequence = ["MOLE", "FRACTIONS", "CH4"]
+    target_sequence = ["MOLE", "FRACTIONS"]
+    target_sequence_ignore = ["MOLE", "FRACTIONS", "WERE"]
     target_len = len(target_sequence)
+    ignore_len = len(target_sequence_ignore)
     start_indexes = []
 
     # Iterate through the list up to the point where the sequence can still fit
     for i in range(len(word_list) - target_len + 1):
         # Check if the slice of the list matches the target sequence
-        if word_list[i:i + target_len] == target_sequence:
+        if word_list[i:i + target_len] == target_sequence and not word_list[i:i + ignore_len] == target_sequence_ignore:
             count += 1
             start_indexes.append(i)
 
