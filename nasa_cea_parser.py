@@ -205,7 +205,7 @@ def main():
         df.index.name = 'Species'
 
         # Export the DataFrame to the specified file type
-        output_path = f'./results/{output_base_name}.{file_ext}'
+        output_path = f'{output_base_name}.{file_ext}'
 
         if file_ext == 'csv':
             # CSV export (most compatible)
