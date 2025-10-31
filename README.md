@@ -76,3 +76,11 @@ Once the environment is active, run the script by providing the **input file pat
 ```bash
 python nasa_cea_parser.py <INPUT_FILE> <OUTPUT_FILENAME> [OPTIONS]
 ```
+
+#### Arguments/Options Described
+
+| Argument/Option         | Type                  | Description                                                                                                 |
+| :---------------------- | :-------------------- | :---------------------------------------------------------------------------------------------------------- |
+| **`<INPUT_FILE>`**      | Positional (Required) | Path to the NASA-CEA output text file that needs parsing.                                                   |
+| **`<OUTPUT_FILENAME>`** | Positional (Required) | The desired base name for the resulting spreadsheet (e.g., passing `data_run_1` creates `data_run_1.xlsx`). |
+| **`-e, --extension`**   | Optional Flag         | Output file format. Choose between `csv` or `xlsx`. Default is `xlsx`.                                      |
