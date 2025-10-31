@@ -74,5 +74,5 @@ Once the environment is active, run the script by providing the **input file pat
 **Syntax:**
 
 ```bash
-python your_parser_script_name.py <INPUT_FILE> <OUTPUT_FILENAME> [OPTIONS]
+python nasa_cea_parser.py <INPUT_FILE> <OUTPUT_FILENAME> [OPTIONS]
 ```
