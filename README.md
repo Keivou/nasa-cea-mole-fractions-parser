@@ -59,7 +59,7 @@ The script only processes the data output. It will be up to the user to manually
     source .venv/bin/activate
 
     # On Windows (Command Prompt)
-    .venv\Scripts\activate.bat
+    .venv/Scripts/activate.bat
     ```
 
 4.  **Install Dependencies:** Install all required Python packages:
