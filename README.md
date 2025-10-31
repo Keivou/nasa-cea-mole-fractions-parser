@@ -62,15 +62,17 @@ The script only processes the data output. It will be up to the user to manually
     .venv\Scripts\activate.bat
     ```
 
-4.  **Install Dependencies:** Install all required Python packages (including `pandas`):
+4.  **Install Dependencies:** Install all required Python packages:
     ```bash
     pip install -r requirements.txt
     ```
 
-### 2. Run the Script
+### 2. Run the Tool (Command Line Interface)
 
-With the virtual environment active and your input file configured:
+Once the environment is active, run the script by providing the **input file path** and the **desired output filename** as arguments.
+
+**Syntax:**
 
 ```bash
-python nasa_cea_parser.py
+python your_parser_script_name.py <INPUT_FILE> <OUTPUT_FILENAME> [OPTIONS]
 ```
