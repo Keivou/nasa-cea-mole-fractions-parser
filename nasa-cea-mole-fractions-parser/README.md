@@ -57,7 +57,7 @@ _Note: The script also requires external Python libraries (`pandas`, `openpyxl`)
 
     ```bash
     git clone https://github.com/Keivou/nasa-cea-mole-fractions-parser
-    cd nasa-cea-mole-fractions-parser
+    cd NASA-CEA-PARSER/nasa-cea-mole-fractions-parser
     ```
 
 2.  **Create Virtual Environment:**
