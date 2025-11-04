@@ -88,7 +88,7 @@ Once the environment is active, run the script by providing the **input file pat
 **Syntax:**
 
 ```bash
-python nasa_cea_parser.py INPUT_FILE OUTPUT_FILENAME [OPTIONS]
+python mole_fractions_parser.py INPUT_FILE OUTPUT_FILENAME [OPTIONS]
 ```
 
 #### Arguments/Options Described
