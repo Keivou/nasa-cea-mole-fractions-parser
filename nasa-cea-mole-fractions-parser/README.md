@@ -56,7 +56,7 @@ _Note: The script also requires external Python libraries (`pandas`, `openpyxl`)
 1.  **Clone the Repository:** Download the project files using Git:
 
     ```bash
-    git clone https://github.com/Keivou/nasa-cea-mole-fractions-parser
+    git clone https://github.com/Keivou/NASA-CEA-PARSER/
     cd NASA-CEA-PARSER/nasa-cea-mole-fractions-parser
     ```
 
