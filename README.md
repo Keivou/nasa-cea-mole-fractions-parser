@@ -37,7 +37,21 @@ The script only processes the data output. It will be up to the user to manually
 
 ## 🚀 Setup & Usage
 
-### 1. Installation
+## 1. Prerequisites
+
+To run this parser successfully, you will need the following software installed on your machine.
+
+| Tool         | Purpose                                                   | Installation Check Command                |
+| :----------- | :-------------------------------------------------------- | :---------------------------------------- |
+| **Python 3** | The programming language required to execute the script.  | `python --version` or `python3 --version` |
+| **Git**      | Used to clone (download) the repository from GitHub.      | `git --version`                           |
+| **pip**      | Python's package installer, used to install dependencies. | `pip --version` or `pip3 --version`       |
+
+---
+
+_Note: The script also requires external Python libraries (`pandas`, `openpyxl`), but these will be automatically installed when you run the setup command in Step 2._
+
+### 2. Installation
 
 1.  **Clone the Repository:** Download the project files using Git:
 
@@ -59,7 +73,7 @@ The script only processes the data output. It will be up to the user to manually
     source .venv/bin/activate
 
     # On Windows (Command Prompt)
-    .venv/Scripts/activate.bat
+    .venv\Scripts\activate.bat
     ```
 
 4.  **Install Dependencies:** Install all required Python packages:
@@ -67,20 +81,20 @@ The script only processes the data output. It will be up to the user to manually
     pip install -r requirements.txt
     ```
 
-### 2. Run the Tool (Command Line Interface)
+### 3. Run the Tool (Command Line Interface)
 
 Once the environment is active, run the script by providing the **input file path** and the **desired output filename** as arguments.
 
 **Syntax:**
 
 ```bash
-python nasa_cea_parser.py <INPUT_FILE> <OUTPUT_FILENAME> [OPTIONS]
+python nasa_cea_parser.py INPUT_FILE OUTPUT_FILENAME [OPTIONS]
 ```
 
 #### Arguments/Options Described
 
-| Argument/Option         | Type                  | Description                                                                                                 |
-| :---------------------- | :-------------------- | :---------------------------------------------------------------------------------------------------------- |
-| **`<INPUT_FILE>`**      | Positional (Required) | Path to the NASA-CEA output text file that needs parsing.                                                   |
-| **`<OUTPUT_FILENAME>`** | Positional (Required) | The desired base name for the resulting spreadsheet (e.g., passing `data_run_1` creates `data_run_1.xlsx`). |
-| **`-e, --extension`**   | Optional Flag         | Output file format. Choose between `csv` or `xlsx`. Default is `xlsx`.                                      |
+| Argument/Option       | Type                  | Description                                                                                                 |
+| :-------------------- | :-------------------- | :---------------------------------------------------------------------------------------------------------- |
+| **`INPUT_FILE`**      | Positional (Required) | Path to the NASA-CEA output text file that needs parsing.                                                   |
+| **`OUTPUT_FILENAME`** | Positional (Required) | The desired base name for the resulting spreadsheet (e.g., passing `data_run_1` creates `data_run_1.xlsx`). |
+| **`-e, --extension`** | Optional Flag         | Output file format. Choose between `csv` or `xlsx`. Default is `xlsx`.                                      |

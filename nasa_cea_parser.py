@@ -1,5 +1,6 @@
 ### Libraries
 import pandas as pd
+import numpy as np
 import sys
 import argparse
 
@@ -124,7 +125,6 @@ def get_aggregated_mole_fractions_dict(table_list, count):
 
     ### Now we aggregate each component into a dictionary where the component is the key
     ### and the value is a list of the compositions in order
-
     aggregated_mole_fractions = {}
 
     for table in range(len(compositions)):
@@ -146,6 +146,18 @@ def get_aggregated_mole_fractions_dict(table_list, count):
             except TypeError:
                 aggregated_mole_fractions[component_name] = []
 
+    # This loop adds a NaN on every component that has missing mole fractions
+    # HOWEVER, it's only added at the end, if CEA happens to skip temperatures
+    # in the middle then this will make it look like it only missed the last ones
+    max_len = max(len(v) for v in aggregated_mole_fractions.values())
+    for species in aggregated_mole_fractions:
+        current_len = len(aggregated_mole_fractions[species])
+        
+        if current_len < max_len:
+            padding_needed = max_len - current_len
+            
+            # This will add instances of np.nan to the list missing mole fractions
+            aggregated_mole_fractions[species].extend([np.nan] * padding_needed)
 
     # print(aggregated_mole_fractions)
     # print(len(aggregated_mole_fractions["CH4"]))
